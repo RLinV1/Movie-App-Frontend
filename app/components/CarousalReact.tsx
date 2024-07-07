@@ -23,7 +23,7 @@ const Carousal: React.FC<CarousalProps> = ({ movies }) => {
     <div className="relative w-full h-[97vh]">
       <Carousel>
         {movies.map((movie, index) => (
-            <div className="relative w-full h-full overflow-hidden rounded-lg bg-slate-900">
+            <div key={index} className="relative w-full h-full overflow-hidden rounded-lg bg-slate-900">
                  <div className="absolute flex justify-evenly items-center top-0 left-0 w-full h-full bg-cover bg-center"
                   style={{ backgroundImage: `url(${movie.backdrops[0]})` }}>
                     <Link href={`/movie/${movie.imdbId}`} className="cursor-pointer">
