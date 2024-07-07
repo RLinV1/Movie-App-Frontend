@@ -107,9 +107,6 @@ const MovieComponent = ({ params }: { params: { imdbId: string } }) => {
                 </div>
               ))}
             </div>
-            {reviews.length > 1&& (
-              <span className='mt-4'>Continued...</span>
-            )}
             
           </div>
         </div>
