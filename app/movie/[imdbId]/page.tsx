@@ -32,7 +32,7 @@ const MovieComponent = ({ params }: { params: { imdbId: string } }) => {
   };
   const fetchReviews = async() => {
     try {
-      const apiUrl = `http://localhost:8080/api/v1/reviews/${params.imdbId}`; // Use absolute URL
+      const apiUrl = `https://movie-app-backend-pg9u.onrender.com/api/v1/reviews/${params.imdbId}`; // Use absolute URL
       const response = await axios.get(apiUrl);
       setReviews(response.data);
       // console.log(response.data);
@@ -58,7 +58,7 @@ const MovieComponent = ({ params }: { params: { imdbId: string } }) => {
 
   const createReview = async() =>{
     try {
-      const apiUrl = 'http://localhost:8080/api/v1/reviews';
+      const apiUrl = 'https://movie-app-backend-pg9u.onrender.com/api/v1/reviews';
       const response = await axios.post(apiUrl, {
         reviewBody: comment,
         imdbId: params.imdbId
