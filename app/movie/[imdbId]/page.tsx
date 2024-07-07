@@ -100,8 +100,8 @@ const MovieComponent = ({ params }: { params: { imdbId: string } }) => {
             </form>
             <h2 className="text-lg font-bold my-4">Reviews</h2>
             <div className='flex justify-center flex-col items-center w-full h-80 overflow-hidden'>
-              {reviews?.map((review: Review) => (
-                <div className='text-white w-[50%] py-1'>
+              {reviews?.map((review: Review, index) => (
+                <div key={index} className='text-white w-[50%] py-1'>
                   <hr />
                   {review.body}
                 </div>
